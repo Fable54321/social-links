@@ -1,0 +1,146 @@
+/* color */
+/* typography */
+/* spacing */
+.margin-top-24px {
+  margin-top: 24px;
+}
+
+.full-border-radius {
+  border-radius: 100vw;
+}
+
+.flex-column-vertical-align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit; /* Get rid of all font sizes and heights */
+}
+
+html {
+  color-scheme: dark light; /* Default dark */
+  hanging-punctuation: first last; /* Not supported in Chrome */
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Media responsive */
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 75ch;
+  text-wrap: pretty; /* Prevents orphans on lines */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+/*general styling*/
+body {
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: hsl(0, 0%, 100%);
+}
+
+h1 {
+  font-family: "Inter";
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  font-family: "Inter";
+  color: hsl(0, 0%, 100%);
+  font-size: 14px;
+  font-weight: 200;
+}
+
+p[data-color-accent] {
+  color: hsl(75, 94%, 57%);
+  font-weight: 600;
+}
+
+main {
+  min-width: 327px;
+  background-color: hsl(0, 0%, 12%);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+img {
+  max-height: 88px;
+  max-width: 88px;
+}
+
+@media (min-width: 40em) and (max-width: 60em) {
+  main {
+    min-width: 456px;
+    padding: 40px;
+  }
+}
+@media (min-width: 60em) {
+  main {
+    min-width: 384px;
+  }
+}
+/*class styling*/
+.wrapper {
+  background-color: hsl(0, 0%, 8%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-location {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 61px;
+}
+
+section {
+  gap: 16px;
+}
+
+.links {
+  min-width: 100%;
+}
+
+.links p {
+  min-width: 100%;
+  background-color: hsl(0, 0%, 20%);
+  padding-block: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 500ms linear;
+}
+
+.links p:hover,
+.links p:focus {
+  background-color: hsl(75, 94%, 57%);
+  cursor: pointer;
+  color: hsl(0, 0%, 8%);
+  transition: 300ms linear;
+}/*# sourceMappingURL=index.css.map */

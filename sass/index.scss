@@ -1,0 +1,99 @@
+@use 'utilities';
+@use "variables" as *;
+@use "reset";
+@use "sass:math";
+
+/*general styling*/
+body { 
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: $clr-neutral-100;
+}
+
+h1 {
+    font-family: $font-family-primary;
+    font-size: $fs-600;
+    font-weight: $fw-bold;
+}
+
+p{
+    font-family: $font-family-primary;
+    color: $clr-neutral-100;
+    font-size: $fs-300;
+    font-weight: 200;
+}
+
+p[data-color-accent] {
+    color: $clr-accent-300;
+    font-weight: $fw-bold;
+}
+
+
+main {
+    min-width: 327px;
+    background-color: $clr-neutral-800;
+    padding: $sz-300;
+    border-radius: $sz-150;
+}
+
+img {
+    max-height: 88px;
+    max-width: 88px;
+}
+
+
+@media (min-width: 40em) and (max-width: 60em){
+    main {
+        min-width: 456px;
+        padding: $sz-500;
+    }
+}
+
+@media (min-width: 60em) {
+    main {
+        min-width: 384px;
+    }
+}
+
+/*class styling*/
+
+.wrapper {
+    background-color: $clr-neutral-900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-location {
+    gap: $sz-100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 61px;
+    
+}
+
+
+section {
+    gap: $sz-200;
+}
+ .links  {
+    min-width: 100%;
+ }
+
+ .links p {
+    min-width: 100%;
+    background-color: $clr-neutral-700;
+    padding-block: $sz-150;
+    font-weight: $fw-bold;
+    border-radius: $sz-100;
+    transition: 500ms linear;
+ }
+
+ .links p:hover, 
+ .links p:focus {
+    background-color: $clr-accent-300;
+    cursor:  pointer;
+    color: $clr-neutral-900;
+    transition: 300ms linear;
+ }
